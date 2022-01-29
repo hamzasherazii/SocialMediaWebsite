@@ -19,7 +19,7 @@
     --border-radius: 2rem;
     --card-border-radius: 1rem;
     --btn-padding: 0.6rem 2rem;
-    --search-padding: 0.6rem 1rem;
+    --search-padding: 0.6rem 1rem; /* This is search bar padding from for TOP TO BOTTOM and LEFT TO RIGHT */
     --card-padding: 1rem;
 }
 
