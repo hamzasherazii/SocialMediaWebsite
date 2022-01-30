@@ -1,17 +1,13 @@
-
-
-
-// ======================================================== SIDEBAR ======================================================== \\                                                     
-
+// SIDEBAR
 const menuItems = document.querySelectorAll('.menu-item');
 
-// ======================================================== MESSAGES ======================================================== \\    
+//MESSAGES
 const messagesNotification = document.querySelector('#messages-notifications');
 const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search')
 
-// ======================================================== THEME ======================================================== \\    
+//THEME
 const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme');
 const fontSizes = document.querySelectorAll('.choose-size span');
@@ -21,7 +17,7 @@ const Bg1 = document.querySelector('.bg-1');
 const Bg2 = document.querySelector('.bg-2');
 const Bg3 = document.querySelector('.bg-3');
 
-// ========================================= REMOVE ACTIVE CLASSES FROM ALL MENU ITEMS ======================================= \\    
+//Remove Active Class From All Menu Items
 const changeActiveItem = () => {
     menuItems.forEach(item => {
         item.classList.remove('active');
@@ -41,7 +37,7 @@ menuItems.forEach(item => {
     })
 })
 
-// ======================================================== SEARCH CHAT ======================================================== \\    
+// search chat
 
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
@@ -60,7 +56,7 @@ const searchMessage = () => {
 messageSearch.addEventListener('keyup', searchMessage);
 
 
-// ======================================================== HIGHLIGHT MESSAGES CARD WHEN A MESSAGE-MENU-ITEM IS CLICKED ======================================================== \\    
+// highlight messages card when messages menu item is clicked
 messagesNotification.addEventListener('click', () => {
     messages.style.boxShadow = '0 0 1rem var(--color-primary)';
     messagesNotification.querySelector('.notification-count').style.display = 'none';
@@ -69,9 +65,9 @@ messagesNotification.addEventListener('click', () => {
     }, 2000);
 })
 
-// ======================================================== THEME CUSTOMIZATION ======================================================== \\    
+// Theme/DISPLAY Customization
 
-// OPEN MODAL 
+// open modal
 
 const openThemeModal = () => {
     themeModal.style.display = 'grid';
@@ -83,15 +79,15 @@ const closeThemeModal = (e) => {
     }
 }
 
-// CLOSE MODAL
+// close modal
 
 themeModal.addEventListener('click', closeThemeModal);
 
 theme.addEventListener('click', openThemeModal);
 
-// FONT SIZES 
+//Font Sizes
 
-// REMOVE ACTIVE CLASS FROM SPANS OR FONT SIZE SELECTORS
+// remove active class from spans or font size selectors
 const removeSizeSelector = () => {
     fontSizes.forEach(size => {
         size.classList.remove('active');
@@ -124,19 +120,19 @@ fontSizes.forEach(size => {
             root.style.setProperty('----sticky-top-left', '-12rem');
             root.style.setProperty('----sticky-top-right', '-35rem');
         }
-        // CHANGE FONT SIZE OF THE ROOT OF HTML ELEMENT
+        // change font size of the root html element
         document.querySelector('html').style.fontSize = fontSize;
     })
 })
 
-// REMOVE ACTIVE CLASS FROM COLORS
+// remove active class from colors
 const changeActiveColorClass = () => {
     colorPalette.forEach(colorPicker => {
         colorPicker.classList.remove('active');
     })
 }
 
-// CHANGE PRIMARY COLORS
+// change primary colors
 
 colorPalette.forEach(color => {
     color.addEventListener('click', () => {
@@ -161,7 +157,7 @@ colorPalette.forEach(color => {
 })
 
 
-// ======================================================== THEME BACKGROUND VALUES ======================================================== \\    
+// Theme Background Values
 
 let lightColorLightness;
 let whiteColorLightness;
@@ -174,13 +170,17 @@ const changeBG = () => {
 }
 
 Bg1.addEventListener('click', () => {
-    // ADD ACTIVE CLASS
+    darkColorLightness = '17%';
+    whiteColorLightness = '100%';
+    lightColorLightness = '95%';
+
+    //add active class
     Bg1.classList.add('active');
-    // REMOVE ACTIVE CLASS FROM OTHERS
+    // remove active class from the others
     Bg2.classList.remove('active');
     Bg3.classList.remove('active');
-    // REMOVE CUSTOMIZED CHANGES FROM LOCAL STORAGE
-    window.location.reload();
+    // remove customized changes from local storage
+    changeBG();
 })
 
 Bg2.addEventListener('click', () => {
@@ -188,12 +188,12 @@ Bg2.addEventListener('click', () => {
     whiteColorLightness = '20%';
     lightColorLightness = '15%';
 
-    // ADD ACTIVE CLASS
+    //add active class
     Bg2.classList.add('active');
-    // REMOVE ACTIVE CLASS FROM OTHERS
+    // remove active class from the others
     Bg1.classList.remove('active');
     Bg3.classList.remove('active');
-    // REMOVE CUSTOMIZED CHANGES FROM LOCAL STORAGE
+    // remove customized changes from local storage
     changeBG();
 })
 
@@ -202,12 +202,10 @@ Bg3.addEventListener('click', () => {
     whiteColorLightness = '10%';
     lightColorLightness = '0%';
 
-    // ADD ACTIVE CLASS
+    //add active class
     Bg3.classList.add('active');
-    // REMOVE ACTIVE CLASS FROM OTHERS
+    // remove active class from the others
     Bg1.classList.remove('active');
     Bg2.classList.remove('active');
     changeBG();
 })
-
-// ======================================================== END OF JAVASCRIPT ======================================================== \\    
