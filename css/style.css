@@ -347,10 +347,12 @@ main .container .left .profile{
     background: url('/images/stories/story-4.png')
     no-repeat center center/cover;
 }
+
 .middle .stories .story:nth-child(5){
     background: url('/images/stories/story-5.jpg')
     no-repeat center center/cover;
 }
+
 .middle .stories .story:nth-child(6){
     background: url('/images/stories/story-6.jpg')
     no-repeat center center/cover;
@@ -678,12 +680,14 @@ main .container .right{
 .customize-theme .background {
     margin-top: 2rem;
 }
+
 .customize-theme .choose-bg {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
 }
+
 .customize-theme .choose-bg > div {
     padding: var(--card-padding);
     width: 100%;
@@ -693,21 +697,26 @@ main .container .right{
     border-radius: 0.4rem;
     cursor: pointer;
 }
+
 .customize-theme .choose-bg > div.active{
     border: 2px solid var(--color-primary);
 }
+
 .customize-theme .choose-bg .bg-1{
     background: white;
     color: black;
 }
+
 .customize-theme .choose-bg .bg-2{
     background: hsl(252, 30%, 17%);
     color: white;
 }
+
 .customize-theme .choose-bg .bg-3{
     background: hsl(252, 30%, 10%);
     color: white;
 }
+
 .customize-theme .choose-bg > div span{
     width: 2rem;
     height: 2rem;
@@ -791,6 +800,3 @@ main .container .right{
     }
 }
 /* -----------x------------- MEDIA QUERY FOR 992PX -------------x------  */
-
-
-
