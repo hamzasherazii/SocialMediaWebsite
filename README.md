@@ -1,8 +1,6 @@
 # SocialMediaWebsite
 
-TITLE: Responsive Social Media Website With Theme Customization Using HTML CSS & JavaScript
-URL: https://www.youtube.com/watch?v=AiFfDjmd0jU
-
+**LIVE WEBSITE:** https://social-media-clone-six.vercel.app/
 
 This is my second HTML & CSS website which I've created. All the folders are assembled properly, with their names.
 
